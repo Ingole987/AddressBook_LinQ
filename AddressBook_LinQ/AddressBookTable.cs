@@ -134,7 +134,5 @@ namespace AddressBook_LinQ
             DisplayContacts(contacts.CopyToDataTable());
         }
     }
-
-   
 }
 
