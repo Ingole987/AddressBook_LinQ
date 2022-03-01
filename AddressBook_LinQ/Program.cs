@@ -10,7 +10,9 @@ DataTable data = addressBookTable.CreateAddressBookDataTable();
 
 addressBookTable.EditContact(data);
 
-//addressBookTable.DeleteContact(dataTable);    
+//addressBookTable.DeleteContact(data);
+
+addressBookTable.RetrieveContactByCityOrState(data);
 
 addressBookTable.DisplayContacts(data);
 
