@@ -9,6 +9,7 @@ namespace AddressBook_LinQ
 {
     public class AddressBookTable
     {
+        
         public DataTable CreateAddressBookDataTable()
         {
             //DataTable 
@@ -29,11 +30,12 @@ namespace AddressBook_LinQ
             dataTable.Rows.Add("Byron ", "Daniels", "4385  West Street", "Grand Rapids", "Michigan", 49546, 6165758233, "6y4ug4knmib@temporary - mail.net");
             dataTable.Rows.Add("James ", "Juarez", "12564  Clay Street", "Indianapolis", "Indiana", 46214, 3174103617, "penlzpd00f@temporary - mail.net");
             return dataTable;
+            CheckCountByType(dataTable);
         }
 
-        public void DisplayContacts(DataTable table)
+        public void DisplayContacts(DataTable dataTable)
         {
-            var contacts = table.Rows.Cast<DataRow>();
+            var contacts = dataTable.Rows.Cast<DataRow>();
 
             foreach (var contact in contacts)
             {
@@ -43,9 +45,9 @@ namespace AddressBook_LinQ
             }
         }
 
-        public void EditContact(DataTable table)
+        public void EditContact(DataTable dataTable)
         {
-            var contacts = table.AsEnumerable().Where(x => x.Field<string>("FirstName") == "James");
+            var contacts = dataTable.AsEnumerable().Where(x => x.Field<string>("FirstName") == "James");
             int count = contacts.Count();
             if (count > 0)
             {
@@ -64,9 +66,9 @@ namespace AddressBook_LinQ
             }
         }
 
-        public void DeleteContact(DataTable table)
+        public void DeleteContact(DataTable dataTable)
         {
-            var contacts = table.AsEnumerable().Where(x => x.Field<string>("LastName") == "Forst");
+            var contacts = dataTable.AsEnumerable().Where(x => x.Field<string>("LastName") == "Forst");
             int count = contacts.Count();
             if (count > 0)
             {
@@ -78,12 +80,12 @@ namespace AddressBook_LinQ
             }
             else
                 Console.WriteLine("Contact is Not in the List");
-            DisplayContacts(table);
+            DisplayContacts(dataTable);
         }
 
-        public void RetrieveContactByCityOrState(DataTable table)
+        public void RetrieveContactByCityOrState(DataTable dataTable)
         {
-            var contacts = table.AsEnumerable().Where(x => x.Field<string>("State") == "Utah");
+            var contacts = dataTable.AsEnumerable().Where(x => x.Field<string>("State") == "Utah");
             int count = contacts.Count();
             if (count > 0)
             {
@@ -107,24 +109,32 @@ namespace AddressBook_LinQ
             Console.WriteLine("Size : {0} ", contacts);
         }
 
-        public void SortContactsByLastName(DataTable table)
+        public void SortContactsByLastName(DataTable dataTable)
         {
-            var contacts = table.Rows.Cast<DataRow>()
-                           .OrderBy(x => x.Field<string>("LastName"));
+            var contacts = dataTable.Rows.Cast<DataRow>().OrderBy(x => x.Field<string>("LastName"));
             DisplayContacts(contacts.CopyToDataTable());
         }
 
-        public void CheckCountByType(DataTable table)
+        public void CheckCountByType(DataTable dataTable)
         {
-            var Profession = table.Rows.Cast<DataRow>()
-                                         .Where(x => x["AddressBookType"].Equals("Profession")).Count();
+            var Profession = dataTable.Rows.Cast<DataRow>().Where(x => x["AddressBookType"].Equals("Profession")).Count();
             Console.WriteLine("'Profession' : {0} ", Profession);
-            var Family = table.Rows.Cast<DataRow>()
-                             .Where(x => x["AddressBookType"].Equals("Family")).Count();
+            var Family = dataTable.Rows.Cast<DataRow>().Where(x => x["AddressBookType"].Equals("Family")).Count();
             Console.WriteLine("'Family' : {0} ", Family);
-            var Friends = table.Rows.Cast<DataRow>()
-                             .Where(x => x["AddressBookType"].Equals("Friends")).Count();
+            var Friends = dataTable.Rows.Cast<DataRow>().Where(x => x["AddressBookType"].Equals("Friends")).Count();
             Console.WriteLine("'Friends' : {0} ", Friends);
         }
+
+        public void AddPersonToFriendsAndFamily(DataTable table)
+        {
+            var contacts = table.Rows.Cast<DataRow>()
+                            .Where(x => x["LastName"].Equals("Whitlatch"));
+
+            Console.WriteLine("\nSuccessfull Added Person To Both Friend & Family!");
+            DisplayContacts(contacts.CopyToDataTable());
+        }
     }
+
+   
 }
+

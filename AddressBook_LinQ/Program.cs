@@ -8,17 +8,17 @@ AddressBookTable addressBookTable = new AddressBookTable();
 
 DataTable data = addressBookTable.CreateAddressBookDataTable();
 
-addressBookTable.EditContact(data);
+//addressBookTable.EditContact(data);
 
-//addressBookTable.DeleteContact(data);
+////addressBookTable.DeleteContact(data);
 
-addressBookTable.RetrieveContactByCityOrState(data);
+//addressBookTable.RetrieveContactByCityOrState(data);
 
-addressBookTable.CheckSizeByCityOrState(data);
+//addressBookTable.CheckSizeByCityOrState(data);
 
-addressBookTable.SortContactsByLastName(data);
+//addressBookTable.SortContactsByLastName(data);
 
 addressBookTable.CheckCountByType(data);
 
-addressBookTable.DisplayContacts(data);
+//addressBookTable.DisplayContacts(data);
 
