@@ -8,6 +8,9 @@ AddressBookTable addressBookTable = new AddressBookTable();
 
 DataTable data = addressBookTable.CreateAddressBookDataTable();
 
+addressBookTable.EditContact(data);
+
+//addressBookTable.DeleteContact(dataTable);    
+
 addressBookTable.DisplayContacts(data);
 
-addressBookTable.EditContact(data);

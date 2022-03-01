@@ -63,5 +63,23 @@ namespace AddressBook_LinQ
                 Console.WriteLine("Contact Does not Found");
             }
         }
+
+        public void DeleteContact(DataTable table)
+        {
+            var contacts = table.AsEnumerable().Where(x => x.Field<string>("LastName") == "Forst");
+            int count = contacts.Count();
+            if (count > 0)
+            {
+                foreach (var row in contacts.ToList())
+                {
+                    row.Delete();
+                    Console.WriteLine("The Contact is deleted succesfully.");
+                }
+            }
+            else
+                Console.WriteLine("Contact is Not in the List");
+            DisplayContacts(table);
+        }
+
     }
 }
