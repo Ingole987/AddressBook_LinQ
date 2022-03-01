@@ -31,9 +31,9 @@ namespace AddressBook_LinQ
             return dataTable;
         }
 
-        public void DisplayContacts(DataTable addresstable)
+        public void DisplayContacts(DataTable table)
         {
-            var contacts = addresstable.Rows.Cast<DataRow>();
+            var contacts = table.Rows.Cast<DataRow>();
 
             foreach (var contact in contacts)
             {
@@ -43,9 +43,9 @@ namespace AddressBook_LinQ
             }
         }
 
-        public void EditContact(DataTable dataTable)
+        public void EditContact(DataTable table)
         {
-            var contacts = dataTable.AsEnumerable().Where(x => x.Field<string>("FirstName") == "James");
+            var contacts = table.AsEnumerable().Where(x => x.Field<string>("FirstName") == "James");
             int count = contacts.Count();
             if (count > 0)
             {
@@ -106,6 +106,14 @@ namespace AddressBook_LinQ
 
             Console.WriteLine("Size : {0} ", contacts);
         }
+
+        public void SortContactsByLastName(DataTable table)
+        {
+            var contacts = table.Rows.Cast<DataRow>()
+                           .OrderBy(x => x.Field<string>("LastName"));
+            DisplayContacts(contacts.CopyToDataTable());
+        }
+
 
     }
 }
