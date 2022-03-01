@@ -114,6 +114,17 @@ namespace AddressBook_LinQ
             DisplayContacts(contacts.CopyToDataTable());
         }
 
-
+        public void CheckCountByType(DataTable table)
+        {
+            var Profession = table.Rows.Cast<DataRow>()
+                                         .Where(x => x["AddressBookType"].Equals("Profession")).Count();
+            Console.WriteLine("'Profession' : {0} ", Profession);
+            var Family = table.Rows.Cast<DataRow>()
+                             .Where(x => x["AddressBookType"].Equals("Family")).Count();
+            Console.WriteLine("'Family' : {0} ", Family);
+            var Friends = table.Rows.Cast<DataRow>()
+                             .Where(x => x["AddressBookType"].Equals("Friends")).Count();
+            Console.WriteLine("'Friends' : {0} ", Friends);
+        }
     }
 }

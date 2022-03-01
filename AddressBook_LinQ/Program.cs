@@ -18,5 +18,7 @@ addressBookTable.CheckSizeByCityOrState(data);
 
 addressBookTable.SortContactsByLastName(data);
 
+addressBookTable.CheckCountByType(data);
+
 addressBookTable.DisplayContacts(data);
 
