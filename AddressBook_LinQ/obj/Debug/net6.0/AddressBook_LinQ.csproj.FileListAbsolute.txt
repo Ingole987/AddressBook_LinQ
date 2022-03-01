@@ -1,0 +1,15 @@
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\bin\Debug\net6.0\AddressBook_LinQ.exe
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\bin\Debug\net6.0\AddressBook_LinQ.deps.json
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\bin\Debug\net6.0\AddressBook_LinQ.runtimeconfig.json
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\bin\Debug\net6.0\AddressBook_LinQ.dll
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\bin\Debug\net6.0\ref\AddressBook_LinQ.dll
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\bin\Debug\net6.0\AddressBook_LinQ.pdb
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\obj\Debug\net6.0\AddressBook_LinQ.csproj.AssemblyReference.cache
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\obj\Debug\net6.0\AddressBook_LinQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\obj\Debug\net6.0\AddressBook_LinQ.AssemblyInfoInputs.cache
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\obj\Debug\net6.0\AddressBook_LinQ.AssemblyInfo.cs
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\obj\Debug\net6.0\AddressBook_LinQ.csproj.CoreCompileInputs.cache
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\obj\Debug\net6.0\AddressBook_LinQ.dll
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\obj\Debug\net6.0\ref\AddressBook_LinQ.dll
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\obj\Debug\net6.0\AddressBook_LinQ.pdb
+C:\Users\prati\source\repos\AddressBook_LinQ\AddressBook_LinQ\AddressBook_LinQ\obj\Debug\net6.0\AddressBook_LinQ.genruntimeconfig.cache
