@@ -14,5 +14,7 @@ addressBookTable.EditContact(data);
 
 addressBookTable.RetrieveContactByCityOrState(data);
 
+addressBookTable.CheckSizeByCityOrState(data);
+
 addressBookTable.DisplayContacts(data);
 
