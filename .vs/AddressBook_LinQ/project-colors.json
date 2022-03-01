@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ee2b6c55-e21d-4821-913f-ac2e357c8614": {
+      "ProjectGuid": "ee2b6c55-e21d-4821-913f-ac2e357c8614",
+      "DisplayName": "AddressBook_LinQ",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
